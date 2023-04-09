@@ -27,7 +27,7 @@
      lineinfile:
       path: /etc/zabbix_agentd.conf
       regexp: '^Server='
-      line: Server=10.129.0.29
+      line: Server=10.129.0.27
 
   -  name: set 'ServerActive=' in config on RedHat
      when:
@@ -35,7 +35,7 @@
      lineinfile:
       path: /etc/zabbix_agentd.conf
       regexp: '^ServerActive='
-      line: ServerActive=10.129.0.29
+      line: ServerActive=10.129.0.27
 
   -  name: set 'Server=' in config on RedHat
      when:
@@ -43,14 +43,14 @@
      lineinfile:
       path: /etc/zabbix/zabbix_agentd.conf
       regexp: '^Server='
-      line: Server=10.129.0.29
+      line: Server=10.129.0.27
   -  name: set 'ServerActive=' in config on Ubuntu
      when:
       ansible_os_family == "Debian"
      lineinfile:
       path: /etc/zabbix/zabbix_agentd.conf
       regexp: '^ServerActive='
-      line: ServerActive=10.129.0.29
+      line: ServerActive=10.129.0.27
 
   handlers:
   - name: zabbix-agent systemd
